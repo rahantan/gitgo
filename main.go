@@ -45,8 +45,25 @@ func Rekursif(data *[]int, angka int) {
 	Rekursif(data, angka-1)
 	*data = append(*data, angka)
 }
+
+type Dosen struct {
+	Name, Matkul string
+}
+
+func GetDataDosen() map[string]any {
+
+	return map[string]any{
+		"1": Dosen{Name: "joko1", Matkul: "pemograman1"},
+		"2": Dosen{Name: "joko2", Matkul: "pemograman2"},
+		"3": Dosen{Name: "joko3", Matkul: "pemograman3"},
+	}
+}
 func main() {
-	var data []int
-	Rekursif(&data, 4)
-	fmt.Println(data)
+	dosen := GetDataDosen()
+	for _, value := range dosen {
+		fmt.Println(value)
+		if data, ok := value.(Dosen); ok {
+			fmt.Printf("nama: %s matakuliah %s\n", data.Name, data.Matkul)
+		}
+	}
 }
