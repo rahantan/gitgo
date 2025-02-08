@@ -87,4 +87,7 @@ func main() {
 	}
 
 	fmt.Println(getName("sukma"))
+
+	fmt.Println(getName("suki"))
+
 }
