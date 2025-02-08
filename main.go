@@ -85,4 +85,6 @@ func main() {
 			fmt.Printf("Name: %s Age %s\n", data.Name, data.Age)
 		}
 	}
+
+	fmt.Println(getName("suki"))
 }
